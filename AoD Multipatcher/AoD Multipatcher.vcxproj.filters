@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="File di origine">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="File di intestazione">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="File di risorse">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="File di origine\Standard_FIX">
+      <UniqueIdentifier>{ac94cb7b-1eaa-42d5-a647-441400b71dba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di origine\Advanced_FIX">
+      <UniqueIdentifier>{8afc9c0a-edff-47c7-8ecb-653d0fd2e794}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di origine\Pro_FIX">
+      <UniqueIdentifier>{6a720dcf-4a7c-4bbf-8542-06eb88d8be4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di origine\Pro_FIX SHARED">
+      <UniqueIdentifier>{22431bc2-5911-446e-a6ed-9f422d9d16d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di origine\Misc">
+      <UniqueIdentifier>{be65af38-44a8-4912-a396-690cf0011a31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File di origine\Menu">
+      <UniqueIdentifier>{cf5e37ca-4830-4104-8ef6-a0d91ca702df}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="MISC\concol.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="MISC\Misc_Functions.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="ADVANCED\Advanced_FIX.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="PRO_SHARED\Pro_FIX.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="STANDARD\Standard_FIX.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="MENU\MENUS.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AoD Multipatcher.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="ADVANCED\Bounding_box_rooms.cpp">
+      <Filter>File di origine\Advanced_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="ADVANCED\Debug.cpp">
+      <Filter>File di origine\Advanced_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="ADVANCED\DebugMenuOverlay.cpp">
+      <Filter>File di origine\Advanced_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="ADVANCED\Disable_vertex_colors.cpp">
+      <Filter>File di origine\Advanced_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="ADVANCED\FixedCameras.cpp">
+      <Filter>File di origine\Advanced_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="ADVANCED\Footprints.cpp">
+      <Filter>File di origine\Advanced_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="ADVANCED\Hide_camera_blinds.cpp">
+      <Filter>File di origine\Advanced_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="ADVANCED\OutputDebugString.cpp">
+      <Filter>File di origine\Advanced_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="ADVANCED\PHOTOMODE_FreeCamera.cpp">
+      <Filter>File di origine\Advanced_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="ADVANCED\PHOTOMODE_MASTER.cpp">
+      <Filter>File di origine\Advanced_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="ADVANCED\SwimCameraCollisions.cpp">
+      <Filter>File di origine\Advanced_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="ADVANCED\Variables_Read.cpp">
+      <Filter>File di origine\Advanced_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="ADVANCED\Variables_Write.cpp">
+      <Filter>File di origine\Advanced_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="MISC\concol.cpp">
+      <Filter>File di origine\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="MISC\Detect_Sasho.cpp">
+      <Filter>File di origine\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="MISC\Detect_Version.cpp">
+      <Filter>File di origine\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="MISC\Misc_Functions.cpp">
+      <Filter>File di origine\Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CONTROLS_MOD_CM_Version_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CONTROLS_MOD_CM_Version_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CONTROLS_MOD_LookCameraXaxis_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CONTROLS_MOD_LookCameraXaxis_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CONTROLS_MOD_LookCameraXaxis_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CONTROLS_MOD_PauseMenuExit_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CONTROLS_MOD_PauseMenuExit_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CONTROLS_MOD_PauseMenuExit_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CONTROLS_MOD_StickDeadZone_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CONTROLS_MOD_StickDeadZone_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CONTROLS_MOD_StickDeadZone_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CONTROLS_MOD_ZoomyCamXaxis_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CONTROLS_MOD_ZoomyCamXaxis_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CONTROLS_MOD_ZoomyCamXaxis_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CutsceneAR_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CutsceneAR_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\CutsceneAR_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\Font_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\Font_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\Font_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\fxGasCloudRotation_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\fxGasCloudRotation_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\fxGasCloudRotation_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\fxLightningSlots_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\fxLightningSlots_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\fxLightningSlots_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\fxRainSlots_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\fxRainSlots_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\fxRainSlots_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\HeatHaze_effect_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\HeatHaze_effect_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\HeatHaze_effect_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\HUD_mod_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\HUD_mod_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\HUD_mod_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\Main_menu_demo_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\Main_menu_demo_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\Main_menu_demo_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\PesceAprile_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\PesceAprile_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\PesceAprile_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\PHOTOMODE_FreeCameraTrigger_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\PHOTOMODE_FreeCameraTrigger_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\PHOTOMODE_FreeCameraTrigger_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\PickupsRotation_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\PickupsRotation_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\PickupsRotation_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\Sidestep_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\Sidestep_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\Sidestep_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\UW_effects_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\UW_effects_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\UW_effects_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO_SHARED\Pro_Fix_Allocate_space.cpp">
+      <Filter>File di origine\Pro_FIX SHARED</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO_SHARED\Pro_Fix_Deallocate_space.cpp">
+      <Filter>File di origine\Pro_FIX SHARED</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO_SHARED\Pro_Fix_Detect_status_ALL.cpp">
+      <Filter>File di origine\Pro_FIX SHARED</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO_SHARED\Pro_Fix_Restore_enabled.cpp">
+      <Filter>File di origine\Pro_FIX SHARED</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO_SHARED\Pro_Fix_Test_Allocate.cpp">
+      <Filter>File di origine\Pro_FIX SHARED</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO_SHARED\Pro_Fix_Write_code.cpp">
+      <Filter>File di origine\Pro_FIX SHARED</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO_SHARED\Pro_Fix_Write_data.cpp">
+      <Filter>File di origine\Pro_FIX SHARED</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\AspectRatio.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\CONTROLS_MOD_Fix_Sasho.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\CONTROLS_MOD_GETPS2PAD.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\CONTROLS_MOD_LadderCamRotation.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\CONTROLS_MOD_MASTER.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\CONTROLS_MOD_MenuButtons.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\CONTROLS_MOD_Mouse_GetValue.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\CONTROLS_MOD_NumpadExit.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\CONTROLS_MOD_PAD_RemapButtons.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\CONTROLS_MOD_ReadAnalogueState.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\Dead_bodies.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\Farsee.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\Force_fur.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\Force_specular.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\Ger_blood.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\HeatHaze_effect_MASTER.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\HighQualityCubemaps.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\Lara_glasses.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\LockOutControl.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\LookCamera_delay.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\LookCamera_InvertYaxis.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\Rain.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\Res_cubemaps.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\Res_shadows.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\Res_waterreflections.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\Snow.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\Snow_shakiness.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\Snow_velocity.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\Subtitles.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="MENU\MENU_ACCESS_ERROR.cpp">
+      <Filter>File di origine\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MENU\MENU_ADVANCED1.cpp">
+      <Filter>File di origine\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MENU\MENU_ADVANCED2.cpp">
+      <Filter>File di origine\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MENU\MENU_EXIT.cpp">
+      <Filter>File di origine\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MENU\MENU_STANDARD1.cpp">
+      <Filter>File di origine\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MENU\MENU_STANDARD2.cpp">
+      <Filter>File di origine\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MENU\MENU_STANDARD3.cpp">
+      <Filter>File di origine\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MENU\MENU_STANDARD4.cpp">
+      <Filter>File di origine\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MENU\MENU_TEST.cpp">
+      <Filter>File di origine\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MENU\MENU_VARIABLES.cpp">
+      <Filter>File di origine\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\ESC_SKIP_MASTER.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\ESC_SKIP_Cutscene.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\ESC_SKIP_FMV.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Icon.rc">
+      <Filter>File di risorse</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="Version.rc">
+      <Filter>File di risorse</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

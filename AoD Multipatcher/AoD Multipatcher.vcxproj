@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{F0925102-DDDF-4BC4-89EE-DFC5E0ED5028}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AoDMultipatcher</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <TargetName>TRAODMP</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>D:\AoD\C++\VISUAL C++\AoD Multipatcher\AoD Multipatcher;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="ADVANCED\Advanced_FIX.h" />
+    <ClInclude Include="MENU\MENUS.h" />
+    <ClInclude Include="MISC\concol.h" />
+    <ClInclude Include="MISC\Misc_Functions.h" />
+    <ClInclude Include="PRO_SHARED\Pro_FIX.h" />
+    <ClInclude Include="STANDARD\Standard_FIX.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ADVANCED\Bounding_box_rooms.cpp" />
+    <ClCompile Include="ADVANCED\Debug.cpp" />
+    <ClCompile Include="ADVANCED\DebugMenuOverlay.cpp" />
+    <ClCompile Include="ADVANCED\Disable_vertex_colors.cpp" />
+    <ClCompile Include="ADVANCED\FixedCameras.cpp" />
+    <ClCompile Include="ADVANCED\Footprints.cpp" />
+    <ClCompile Include="ADVANCED\Hide_camera_blinds.cpp" />
+    <ClCompile Include="ADVANCED\OutputDebugString.cpp" />
+    <ClCompile Include="ADVANCED\PHOTOMODE_FreeCamera.cpp" />
+    <ClCompile Include="ADVANCED\PHOTOMODE_MASTER.cpp" />
+    <ClCompile Include="ADVANCED\SwimCameraCollisions.cpp" />
+    <ClCompile Include="ADVANCED\Variables_Read.cpp" />
+    <ClCompile Include="ADVANCED\Variables_Write.cpp" />
+    <ClCompile Include="MENU\MENU_ACCESS_ERROR.cpp" />
+    <ClCompile Include="MENU\MENU_ADVANCED1.cpp" />
+    <ClCompile Include="MENU\MENU_ADVANCED2.cpp" />
+    <ClCompile Include="MENU\MENU_EXIT.cpp" />
+    <ClCompile Include="MENU\MENU_STANDARD1.cpp" />
+    <ClCompile Include="MENU\MENU_STANDARD2.cpp" />
+    <ClCompile Include="MENU\MENU_STANDARD3.cpp" />
+    <ClCompile Include="MENU\MENU_STANDARD4.cpp" />
+    <ClCompile Include="MENU\MENU_TEST.cpp" />
+    <ClCompile Include="MENU\MENU_VARIABLES.cpp" />
+    <ClCompile Include="MISC\concol.cpp" />
+    <ClCompile Include="MISC\Detect_Sasho.cpp" />
+    <ClCompile Include="MISC\Detect_Version.cpp" />
+    <ClCompile Include="MISC\Misc_Functions.cpp" />
+    <ClCompile Include="PRO\CONTROLS_MOD_CM_Version_Detect.cpp" />
+    <ClCompile Include="PRO\CONTROLS_MOD_CM_Version_Enable.cpp" />
+    <ClCompile Include="PRO\CONTROLS_MOD_LookCameraXaxis_Detect.cpp" />
+    <ClCompile Include="PRO\CONTROLS_MOD_LookCameraXaxis_Disable.cpp" />
+    <ClCompile Include="PRO\CONTROLS_MOD_LookCameraXaxis_Enable.cpp" />
+    <ClCompile Include="PRO\CONTROLS_MOD_PauseMenuExit_Detect.cpp" />
+    <ClCompile Include="PRO\CONTROLS_MOD_PauseMenuExit_Disable.cpp" />
+    <ClCompile Include="PRO\CONTROLS_MOD_PauseMenuExit_Enable.cpp" />
+    <ClCompile Include="PRO\CONTROLS_MOD_StickDeadZone_Detect.cpp" />
+    <ClCompile Include="PRO\CONTROLS_MOD_StickDeadZone_Disable.cpp" />
+    <ClCompile Include="PRO\CONTROLS_MOD_StickDeadZone_Enable.cpp" />
+    <ClCompile Include="PRO\CONTROLS_MOD_ZoomyCamXaxis_Detect.cpp" />
+    <ClCompile Include="PRO\CONTROLS_MOD_ZoomyCamXaxis_Disable.cpp" />
+    <ClCompile Include="PRO\CONTROLS_MOD_ZoomyCamXaxis_Enable.cpp" />
+    <ClCompile Include="PRO\CutsceneAR_Detect.cpp" />
+    <ClCompile Include="PRO\CutsceneAR_Disable.cpp" />
+    <ClCompile Include="PRO\CutsceneAR_Enable.cpp" />
+    <ClCompile Include="PRO\Font_Detect.cpp" />
+    <ClCompile Include="PRO\Font_Disable.cpp" />
+    <ClCompile Include="PRO\Font_Enable.cpp" />
+    <ClCompile Include="PRO\fxGasCloudRotation_Detect.cpp" />
+    <ClCompile Include="PRO\fxGasCloudRotation_Disable.cpp" />
+    <ClCompile Include="PRO\fxGasCloudRotation_Enable.cpp" />
+    <ClCompile Include="PRO\fxLightningSlots_Detect.cpp" />
+    <ClCompile Include="PRO\fxLightningSlots_Disable.cpp" />
+    <ClCompile Include="PRO\fxLightningSlots_Enable.cpp" />
+    <ClCompile Include="PRO\fxRainSlots_Detect.cpp" />
+    <ClCompile Include="PRO\fxRainSlots_Disable.cpp" />
+    <ClCompile Include="PRO\fxRainSlots_Enable.cpp" />
+    <ClCompile Include="PRO\HeatHaze_effect_Detect.cpp" />
+    <ClCompile Include="PRO\HeatHaze_effect_Disable.cpp" />
+    <ClCompile Include="PRO\HeatHaze_effect_Enable.cpp" />
+    <ClCompile Include="PRO\HUD_mod_Detect.cpp" />
+    <ClCompile Include="PRO\HUD_mod_Disable.cpp" />
+    <ClCompile Include="PRO\HUD_mod_Enable.cpp" />
+    <ClCompile Include="PRO\Main_menu_demo_Detect.cpp" />
+    <ClCompile Include="PRO\Main_menu_demo_Disable.cpp" />
+    <ClCompile Include="PRO\Main_menu_demo_Enable.cpp" />
+    <ClCompile Include="PRO\PesceAprile_Detect.cpp" />
+    <ClCompile Include="PRO\PesceAprile_Disable.cpp" />
+    <ClCompile Include="PRO\PesceAprile_Enable.cpp" />
+    <ClCompile Include="PRO\PHOTOMODE_FreeCameraTrigger_Detect.cpp" />
+    <ClCompile Include="PRO\PHOTOMODE_FreeCameraTrigger_Disable.cpp" />
+    <ClCompile Include="PRO\PHOTOMODE_FreeCameraTrigger_Enable.cpp" />
+    <ClCompile Include="PRO\PickupsRotation_Detect.cpp" />
+    <ClCompile Include="PRO\PickupsRotation_Disable.cpp" />
+    <ClCompile Include="PRO\PickupsRotation_Enable.cpp" />
+    <ClCompile Include="PRO\Sidestep_Detect.cpp" />
+    <ClCompile Include="PRO\Sidestep_Disable.cpp" />
+    <ClCompile Include="PRO\Sidestep_Enable.cpp" />
+    <ClCompile Include="PRO\UW_effects_Detect.cpp" />
+    <ClCompile Include="PRO\UW_effects_Disable.cpp" />
+    <ClCompile Include="PRO\UW_effects_Enable.cpp" />
+    <ClCompile Include="AoD Multipatcher.cpp" />
+    <ClCompile Include="PRO_SHARED\Pro_Fix_Allocate_space.cpp" />
+    <ClCompile Include="PRO_SHARED\Pro_Fix_Deallocate_space.cpp" />
+    <ClCompile Include="PRO_SHARED\Pro_Fix_Detect_status_ALL.cpp" />
+    <ClCompile Include="PRO_SHARED\Pro_Fix_Restore_enabled.cpp" />
+    <ClCompile Include="PRO_SHARED\Pro_Fix_Test_Allocate.cpp" />
+    <ClCompile Include="PRO_SHARED\Pro_Fix_Write_code.cpp" />
+    <ClCompile Include="PRO_SHARED\Pro_Fix_Write_data.cpp" />
+    <ClCompile Include="STANDARD\AspectRatio.cpp" />
+    <ClCompile Include="STANDARD\CONTROLS_MOD_Fix_Sasho.cpp" />
+    <ClCompile Include="STANDARD\CONTROLS_MOD_GETPS2PAD.cpp" />
+    <ClCompile Include="STANDARD\CONTROLS_MOD_LadderCamRotation.cpp" />
+    <ClCompile Include="STANDARD\CONTROLS_MOD_MASTER.cpp" />
+    <ClCompile Include="STANDARD\CONTROLS_MOD_MenuButtons.cpp" />
+    <ClCompile Include="STANDARD\CONTROLS_MOD_Mouse_GetValue.cpp" />
+    <ClCompile Include="STANDARD\CONTROLS_MOD_NumpadExit.cpp" />
+    <ClCompile Include="STANDARD\CONTROLS_MOD_PAD_RemapButtons.cpp" />
+    <ClCompile Include="STANDARD\CONTROLS_MOD_ReadAnalogueState.cpp" />
+    <ClCompile Include="STANDARD\ESC_SKIP_Cutscene.cpp" />
+    <ClCompile Include="STANDARD\Dead_bodies.cpp" />
+    <ClCompile Include="STANDARD\Farsee.cpp" />
+    <ClCompile Include="STANDARD\ESC_SKIP_MASTER.cpp" />
+    <ClCompile Include="STANDARD\ESC_SKIP_FMV.cpp" />
+    <ClCompile Include="STANDARD\Force_fur.cpp" />
+    <ClCompile Include="STANDARD\Force_specular.cpp" />
+    <ClCompile Include="STANDARD\Ger_blood.cpp" />
+    <ClCompile Include="STANDARD\HeatHaze_effect_MASTER.cpp" />
+    <ClCompile Include="STANDARD\HighQualityCubemaps.cpp" />
+    <ClCompile Include="STANDARD\Lara_glasses.cpp" />
+    <ClCompile Include="STANDARD\LockOutControl.cpp" />
+    <ClCompile Include="STANDARD\LookCamera_delay.cpp" />
+    <ClCompile Include="STANDARD\LookCamera_InvertYaxis.cpp" />
+    <ClCompile Include="STANDARD\Rain.cpp" />
+    <ClCompile Include="STANDARD\Res_cubemaps.cpp" />
+    <ClCompile Include="STANDARD\Res_shadows.cpp" />
+    <ClCompile Include="STANDARD\Res_waterreflections.cpp" />
+    <ClCompile Include="STANDARD\Snow.cpp" />
+    <ClCompile Include="STANDARD\Snow_shakiness.cpp" />
+    <ClCompile Include="STANDARD\Snow_velocity.cpp" />
+    <ClCompile Include="STANDARD\Subtitles.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Icon.rc" />
+    <ResourceCompile Include="Version.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

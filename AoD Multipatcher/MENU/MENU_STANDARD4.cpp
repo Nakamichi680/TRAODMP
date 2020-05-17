@@ -10,7 +10,7 @@ int MENU_STANDARD4(int &Version, string &Short_name)
 	do
 	{
 		Pro_Fix_Status Pro_Fix;
-		int ver = Detect_version_advanced();
+		//int ver = Detect_version_advanced();
 		Pro_Fix_Detect_status_ALL(&Pro_Fix);
 		bool HQCubemaps_status = Detect_HighQualityCubemap_status();
 		int Res_waterreflections_status = Detect_Res_waterreflections_status();
@@ -73,7 +73,7 @@ int MENU_STANDARD4(int &Version, string &Short_name)
 		}
 		cout <<aqua<< "º\n"
 				" ÌÍÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹\n"
-				" º" <<white<< "  Setting  " <<aqua<<"³"<<white<< "                                Standard Mods (4/4)                               "
+				" º" <<white<< "  Setting  " <<aqua<<"³"<<white<< "                                Standard Mods (4/5)                               "
 				<<aqua<<"³"<<white<< "       Status       " <<aqua<< "º\n"
 				" ÇÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
 				" º           ³                                                                                  ³                    º\n"
@@ -221,7 +221,7 @@ int MENU_STANDARD4(int &Version, string &Short_name)
 		cout << " º           ³                                                                                  ³                    º\n"
 				" ÇÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
 				" º" <<white<< "   <---- (P)revious page   " <<aqua<< "³" <<white<< "                (X) Switch to Advanced Mods                "
-				<<aqua<< "³" <<white<< "                           " <<aqua<< "º\n"
+				<<aqua<< "³" <<white<< "     (N)ext page ---->     " <<aqua<< "º\n"
 				" ÇÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
 				" º                                                         ³                                                         º\n"
 				" º" <<green<< "                 (S)ave changes and exit                 " <<aqua<< "³" <<red<< "               (D)iscard changes and exit                " <<aqua<< "º\n"
@@ -229,7 +229,7 @@ int MENU_STANDARD4(int &Version, string &Short_name)
 				" ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹\n"
 				" º" <<pink<< "              TRAOD EXE Multi-Patcher by Nakamichi680              " <<aqua<< "º" <<pink<< "    Version: " << VER << "   " <<aqua<< "º" <<pink<< "  Build date: " << BDATE << "  " <<aqua<< "º\n"
 				" ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼\n";
-		cout << "\n Select an option and press Enter [" <<white<< "1-7/P/X/S/D" <<aqua<< "]: " <<white;
+		cout << "\n Select an option and press Enter [" <<white<< "1-7/P/N/X/S/D" <<aqua<< "]: " <<white;
 		char Selection;
 		string userinput;
 		userinput.clear();
@@ -284,6 +284,8 @@ int MENU_STANDARD4(int &Version, string &Short_name)
 			return 50;
 		case 'P':
 			return 3;
+		case 'N':
+			return 5;
 		case 'S':
 			return 100;
 		case 'D':

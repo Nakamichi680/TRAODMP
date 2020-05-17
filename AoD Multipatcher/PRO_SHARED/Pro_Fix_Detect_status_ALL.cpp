@@ -22,6 +22,7 @@ void Pro_Fix_Detect_status_ALL(Pro_Fix_Status *Status)
 	Status->StickDeadZone_status = StickDeadZone_Detect();						// Controlla se è attivata la dead zone per gli sticks del gamepad
 	Status->PauseMenuExit_status = PauseMenuExit_Detect();						// Controlla se è attivata la mod per uscire subito dal menu pausa col gamepad
 	Status->HeatHaze_effect_status = HeatHaze_effect_Detect();					// Controlla se è attivato il fix dell'effetto Heat Haze
+	Status->PS_Filters_status = PS_Filters_Detect();							// Controlla il tipo di effetto Pixel Shader applicato al gioco
 	//Status->PesceAprile_status = PesceAprile_Detect();						// PESCE D'APRILE
 	Status->CutsceneAR_status = CutsceneAR_Detect();
 }

@@ -10,7 +10,7 @@ int MENU_STANDARD3(int &Version, string &Short_name)
 	do
 	{
 		Pro_Fix_Status Pro_Fix;
-		int ver = Detect_version_advanced();
+		//int ver = Detect_version_advanced();
 		Pro_Fix_Detect_status_ALL(&Pro_Fix);
 		bool ESC_SKIP_Cutscene_status = Detect_ESC_SKIP_Cutscene_status();			// Controlla se le cutscene si interrompono con il solo tasto ESC
 		bool ESC_SKIP_FMV_status = Detect_ESC_SKIP_FMV_status();					// Controlla se gli FMV si interrompono con il solo tasto ESC
@@ -57,7 +57,7 @@ int MENU_STANDARD3(int &Version, string &Short_name)
 		}
 		cout <<aqua<< "º\n"
 				" ÌÍÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹\n"
-				" º" <<white<< "  Setting  " <<aqua<<"³"<<white<< "                                Standard Mods (3/4)                               "
+				" º" <<white<< "  Setting  " <<aqua<<"³"<<white<< "                                Standard Mods (3/5)                               "
 				<<aqua<<"³"<<white<< "       Status       " <<aqua<< "º\n"
 				" ÇÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
 				" º           ³                                                                                  ³                    º\n"

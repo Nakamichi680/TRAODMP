@@ -2,6 +2,9 @@
 #include "stdafx.h"
 
 
+enum class PS_FILTER {NONE, SEPIA, EMBOSS, SHARPENING, DISTORT, NEGATIVE, GRAYSCALE, BW, BWINVERSE, RED, GREEN, BLUE, NIGHTVISION, POSTERIZE, MOSAIC, DRAWING};
+
+
 class Pro_Fix_Class {
 public:
 	size_t EXE_offset;					// Offset all'interno della stringa EXEorig in cui inizia lo slot per l'assembly da iniettare (x90x90x90x90...)
@@ -71,6 +74,7 @@ public:
 	bool ZoomyCamXaxis_status = false;			// Controls mod
 	bool StickDeadZone_status = false;			// Controls mod
 	bool PauseMenuExit_status = false;			// Controls mod
+	PS_FILTER PS_Filters_status = PS_FILTER::NONE;
 };
 
 
@@ -142,6 +146,10 @@ void PauseMenuExit_Disable();
 bool HeatHaze_effect_Detect();				// Ritorna vero se la modifica è attiva
 void HeatHaze_effect_Enable();				// Ripristina l'effetto Heat Haze
 void HeatHaze_effect_Disable();
+
+PS_FILTER PS_Filters_Detect();				// Restituisce il tipo di effetto applicato, NONE se non c'è alcun effetto
+void PS_Filters_Enable(PS_FILTER effect);	// Applica l'effetto Pixel Shader selezionato
+void PS_Filters_Disable();
 
 // INCOMPLETI
 bool PesceAprile_Detect();					// Ritorna vero se la modifica è attiva

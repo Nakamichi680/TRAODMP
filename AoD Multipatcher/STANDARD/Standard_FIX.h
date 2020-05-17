@@ -71,3 +71,4 @@ void Change_MenuButtons_status();							// Cambia i tasti indietro e su/giù nei 
 void Change_NumpadExit_status();							// Permette di uscire dal tastierino numerico con il gamepad (normalmente impossibile)
 // FINE CONTROLS MOD
 void Change_HeatHaze_effect_MASTER_status(Pro_Fix_Status *Pro_Fix);
+void Change_PS_Filters_MASTER_status(Pro_Fix_Status *Pro_Fix);

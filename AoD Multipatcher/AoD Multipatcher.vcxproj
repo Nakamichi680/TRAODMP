@@ -171,6 +171,7 @@
     <ClCompile Include="MENU\MENU_STANDARD2.cpp" />
     <ClCompile Include="MENU\MENU_STANDARD3.cpp" />
     <ClCompile Include="MENU\MENU_STANDARD4.cpp" />
+    <ClCompile Include="MENU\MENU_STANDARD5.cpp" />
     <ClCompile Include="MENU\MENU_TEST.cpp" />
     <ClCompile Include="MENU\MENU_VARIABLES.cpp" />
     <ClCompile Include="MISC\concol.cpp" />
@@ -224,6 +225,9 @@
     <ClCompile Include="PRO\PickupsRotation_Detect.cpp" />
     <ClCompile Include="PRO\PickupsRotation_Disable.cpp" />
     <ClCompile Include="PRO\PickupsRotation_Enable.cpp" />
+    <ClCompile Include="PRO\PS_Filters_Detect.cpp" />
+    <ClCompile Include="PRO\PS_Filters_Disable.cpp" />
+    <ClCompile Include="PRO\PS_Filters_Enable.cpp" />
     <ClCompile Include="PRO\Sidestep_Detect.cpp" />
     <ClCompile Include="PRO\Sidestep_Disable.cpp" />
     <ClCompile Include="PRO\Sidestep_Enable.cpp" />
@@ -262,6 +266,7 @@
     <ClCompile Include="STANDARD\LockOutControl.cpp" />
     <ClCompile Include="STANDARD\LookCamera_delay.cpp" />
     <ClCompile Include="STANDARD\LookCamera_InvertYaxis.cpp" />
+    <ClCompile Include="STANDARD\PS_Filters_MASTER.cpp" />
     <ClCompile Include="STANDARD\Rain.cpp" />
     <ClCompile Include="STANDARD\Res_cubemaps.cpp" />
     <ClCompile Include="STANDARD\Res_shadows.cpp" />

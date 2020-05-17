@@ -122,6 +122,12 @@ int main(int argc, char **argv)
 					if (current_page == 50)
 						current_page = old_advanced_page;
 					break;
+				case (5):
+					old_standard_page = current_page;
+					current_page = MENU_STANDARD5(Version, Short_name);
+					if (current_page == 50)
+						current_page = old_advanced_page;
+					break;
 				case (50):
 					old_advanced_page = current_page;
 					current_page = MENU_ADVANCED1(Version, Short_name);

@@ -1,25 +1,19 @@
 #include "stdafx.h"
 #include "MISC/concol.h"
 #include "STANDARD/Standard_FIX.h"
-#include "ADVANCED/Advanced_FIX.h"
 #include "PRO_SHARED/Pro_FIX.h"
 #include "MISC/Misc_Functions.h"
 
 
-int MENU_ADVANCED2(int &Version, string &Short_name)
+int MENU_STANDARD5(int &Version, string &Short_name)
 {
 	do
 	{
 		Pro_Fix_Status Pro_Fix;
 		//int ver = Detect_version_advanced();
 		Pro_Fix_Detect_status_ALL(&Pro_Fix);
-		bool FixedCameras_status = Detect_FixedCameras_status();							// Controlla se le telecamere fisse sono disattivate
-		bool SwimCameraCollisions_status = Detect_SwimCameraCollisions_status();			// Controlla se le collisioni della swim camera sono ignorate
-		bool PhotoMode_Master_status = Detect_PHOTOMODE_MASTER_status(Pro_Fix);				// Controlla se la PhotoMode Š attiva
-		bool Footprints_status = Detect_Footprints_status();								// Controlla se la mod per le orme Š attiva
 
 		stringstream text;
-		setbackcolor(black);
 		system("cls");
 		cout << " ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»\n"
 				" º                                                                                                                   º\n"
@@ -60,62 +54,31 @@ int MENU_ADVANCED2(int &Version, string &Short_name)
 		}
 		cout <<aqua<< "º\n"
 				" ÌÍÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹\n"
-				" º" <<white<< "  Setting  " <<aqua<<"³"<<white<< "                                Advanced Mods (2/2)                               "
+				" º" <<white<< "  Setting  " <<aqua<<"³"<<white<< "                                Standard Mods (5/5)                               "
 				<<aqua<<"³"<<white<< "       Status       " <<aqua<< "º\n"
 				" ÇÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
 				" º           ³                                                                                  ³                    º\n"
-				" º     1     ³  DISABLE FIXED CAMERAS                                                           ³   (";
-		if (FixedCameras_status)
+				" º           ³  FILTERS                                                                         ³   (";
+		if (Pro_Fix.PS_Filters_status != PS_FILTER::NONE)
 			cout << "ù) Enabled      º\n";
 		else
 			cout << " ) Enabled      º\n";
-		cout << " º           ³  Fixed cameras will no longer work.                                              ³   (";
-		if (!FixedCameras_status)
+		cout << " º     1     ³  Customize game appearance by applying some cool filters.                        ³   (";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::NONE)
 			cout << "ù) Disabled     º\n";
 		else
 			cout << " ) Disabled     º\n";
-		cout << " º           ³                                                                                  ³                    º\n"
-				" ÇÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
-				" º           ³                                                                                  ³                    º\n"
-				" º     2     ³  DISABLE SWIM/FLY CAMERA COLLISIONS                                              ³   (";
-		if (SwimCameraCollisions_status)
-			cout << "ù) Enabled      º\n";
-		else
-			cout << " ) Enabled      º\n";
-		cout << " º           ³  Camera won't collide with the environment while swimming and flying.            ³   (";
-		if (!SwimCameraCollisions_status)
-			cout << "ù) Disabled     º\n";
-		else
-			cout << " ) Disabled     º\n";
-		cout << " º           ³                                                                                  ³                    º\n"
-				" ÇÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
-				" º           ³                                                                                  ³                    º\n"
-				" º     3     ³  PHOTO MODE (TRAOD_P3/P4 ONLY)                                                   ³   (";
-		if (PhotoMode_Master_status)
-			cout << "ù) Enabled      º\n";
-		else
-			cout << " ) Enabled      º\n";
-		cout << " º           ³  Select this for more information.                                               ³   (";
-		if (!PhotoMode_Master_status)
-			cout << "ù) Disabled     º\n";
-		else
-			cout << " ) Disabled     º\n";
-		cout << " º           ³                                                                                  ³                    º\n"
-				" ÇÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
-				" º           ³                                                                                  ³                    º\n"
-				" º     4     ³  ALWAYS ON FOOTPRINTS MOD                                                        ³   (";
-		if (Footprints_status)
-			cout << "ù) Enabled      º\n";
-		else
-			cout << " ) Enabled      º\n";
-		cout << " º           ³  Lara will leave footprints everywhere. Experimental.                            ³   (";
-		if (!Footprints_status)
-			cout << "ù) Disabled     º\n";
-		else
-			cout << " ) Disabled     º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::SEPIA)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Sepia     º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::EMBOSS)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Emboss    º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::SHARPENING)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Sharpening  º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::NONE)
+			cout << " º           ³  Select this for more information.                                               ³                    º\n";
 		cout << " º           ³                                                                                  ³                    º\n"
 				" ÇÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
-				" º" <<white<< "   <---- (P)revious page   " <<aqua<< "³" <<white<< "                (X) Switch to Standard Mods                "
+				" º" <<white<< "   <---- (P)revious page   " <<aqua<< "³" <<white<< "                (X) Switch to Advanced Mods                "
 				<<aqua<< "³" <<white<< "                           " <<aqua<< "º\n"
 				" ÇÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
 				" º                                                         ³                                                         º\n"
@@ -124,7 +87,7 @@ int MENU_ADVANCED2(int &Version, string &Short_name)
 				" ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹\n"
 				" º" <<pink<< "              TRAOD EXE Multi-Patcher by Nakamichi680              " <<aqua<< "º" <<pink<< "    Version: " << VER << "   " <<aqua<< "º" <<pink<< "  Build date: " << BDATE << "  " <<aqua<< "º\n"
 				" ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼\n"
-				"\n Select an option and press Enter [" <<white<< "1-4/P/X/S/D" <<aqua<< "]: " <<white;
+				"\n Select an option and press Enter [" <<white<< "1/P/X/S/D" <<aqua<< "]: " <<white;
 		char Selection;
 		string userinput;
 		userinput.clear();
@@ -138,27 +101,15 @@ int MENU_ADVANCED2(int &Version, string &Short_name)
 		switch (Selection)
 		{
 		case '1':
-			Change_FixedCameras_status();
+			Change_PS_Filters_MASTER_status(&Pro_Fix);
 			break;
-		case '2':
-			Change_SwimCameraCollisions_status();
-			break;
-		case '3':
-			Change_PHOTOMODE_MASTER_status(&Pro_Fix);
-			break;
-		case '4':
-			Change_Footprints_status();
-			break;
-		case 'P':
-			return 50;
 		case 'X':
-			setbackcolor(dark_blue);
-			return 1;
+			return 50;
+		case 'P':
+			return 4;
 		case 'S':
-			setbackcolor(dark_blue);
 			return 100;
 		case 'D':
-			setbackcolor(dark_blue);
 			return 101;
 		}
 	} while (true);

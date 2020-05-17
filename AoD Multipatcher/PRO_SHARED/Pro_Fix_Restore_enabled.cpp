@@ -36,6 +36,8 @@ void Pro_Fix_Restore_enabled(Pro_Fix_Status Pro_Fix)
 		PauseMenuExit_Enable();
 	if (Pro_Fix.HeatHaze_effect_status)
 		HeatHaze_effect_Enable();
+	if (Pro_Fix.PS_Filters_status != PS_FILTER::NONE)
+		PS_Filters_Enable(Pro_Fix.PS_Filters_status);
 	//if (Pro_Fix.PesceAprile_status)
 		//PesceAprile_Enable();
 	if (Pro_Fix.CutsceneAR_status)

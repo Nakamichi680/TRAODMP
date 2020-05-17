@@ -416,6 +416,21 @@
     <ClCompile Include="STANDARD\ESC_SKIP_FMV.cpp">
       <Filter>File di origine\Standard_FIX</Filter>
     </ClCompile>
+    <ClCompile Include="MENU\MENU_STANDARD5.cpp">
+      <Filter>File di origine\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\PS_Filters_Enable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\PS_Filters_Disable.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="PRO\PS_Filters_Detect.cpp">
+      <Filter>File di origine\Pro_FIX</Filter>
+    </ClCompile>
+    <ClCompile Include="STANDARD\PS_Filters_MASTER.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Icon.rc">

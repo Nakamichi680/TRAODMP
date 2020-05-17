@@ -15,6 +15,6 @@ using namespace std;
 
 extern string EXEorig;
 extern int ver;
-static const string VER = "2.8 ";
-static const string BDATE = "2019-06-09";
+static const string VER = "2.9a";
+static const string BDATE = "2020-05-17";
 static const string CONTROLSMODVERSION = "1.0";		// Cambiare questo valore ad ogni modifica della Controls Mod. Tenere la lunghezza fissa a 3 caratteri

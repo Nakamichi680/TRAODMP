@@ -11,7 +11,6 @@ int MENU_ADVANCED2(int &Version, string &Short_name)
 	do
 	{
 		Pro_Fix_Status Pro_Fix;
-		//int ver = Detect_version_advanced();
 		Pro_Fix_Detect_status_ALL(&Pro_Fix);
 		bool FixedCameras_status = Detect_FixedCameras_status();							// Controlla se le telecamere fisse sono disattivate
 		bool SwimCameraCollisions_status = Detect_SwimCameraCollisions_status();			// Controlla se le collisioni della swim camera sono ignorate

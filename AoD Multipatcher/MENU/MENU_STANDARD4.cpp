@@ -10,7 +10,6 @@ int MENU_STANDARD4(int &Version, string &Short_name)
 	do
 	{
 		Pro_Fix_Status Pro_Fix;
-		//int ver = Detect_version_advanced();
 		Pro_Fix_Detect_status_ALL(&Pro_Fix);
 		bool HQCubemaps_status = Detect_HighQualityCubemap_status();
 		int Res_waterreflections_status = Detect_Res_waterreflections_status();

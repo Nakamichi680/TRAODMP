@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "MISC/concol.h"
-//#include "STANDARD/Standard_FIX.h"
 #include "PRO_SHARED/Pro_FIX.h"
 
 
@@ -18,8 +17,7 @@ void Change_PS_Filters_MASTER_status(Pro_Fix_Status *Pro_Fix)
 				" º" <<white<< "                                                      FILTERS                                                      " <<aqua<< "º\n"
 				" ÇÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
 				" º                                                                                                                   º\n"
-				" º   All keyboard/gamepad inputs except for the \"ESC\" button will be ignored during cutscenes and/or FMVs, thus      º\n"
-				" º   making it possible, for example, to take screenshots or to start video recording.                               º\n"
+				" º   Pixel shader 2.0 effects for AoD.                                                                               º\n"
 				" º                                                                                                                   º\n"
 				" º   Choose one of the following options:                                                                            º\n"
 				" º                                                                                                                   º\n"
@@ -37,6 +35,12 @@ void Change_PS_Filters_MASTER_status(Pro_Fix_Status *Pro_Fix)
 				" º         11)  GREEN                                                                                                º\n"
 				" º         12)  BLUE                                                                                                 º\n"
 				" º         13)  NIGHT VISION                                                                                         º\n"
+				" º         14)  POSTERIZE                                                                                            º\n"
+				" º         15)  MOSAIC                                                                                               º\n"
+				" º         16)  DRAWING                                                                                              º\n"
+				" º         17)  NEON                                                                                                 º\n"
+				" º         18)  ANAGLYPH                                                                                             º\n"
+				" º         19)  VIGNETTE                                                                                             º\n"
 				" º                                                                                                                   º\n"
 				" º                                                                                                                   º\n"
 				" º                                                                                                                   º\n"
@@ -74,8 +78,14 @@ void Change_PS_Filters_MASTER_status(Pro_Fix_Status *Pro_Fix)
 			cout << "Enabled        Preset: Mosaic                                                                   " <<aqua<< "º\n";
 		if (Pro_Fix->PS_Filters_status == PS_FILTER::DRAWING)
 			cout << "Enabled        Preset: Drawing                                                                  " <<aqua<< "º\n";
+		if (Pro_Fix->PS_Filters_status == PS_FILTER::NEON)
+			cout << "Enabled        Preset: Neon                                                                     " <<aqua<< "º\n";
+		if (Pro_Fix->PS_Filters_status == PS_FILTER::ANAGLYPH)
+			cout << "Enabled        Preset: Anaglyph                                                                 " <<aqua<< "º\n";
+		if (Pro_Fix->PS_Filters_status == PS_FILTER::VIGNETTE)
+			cout << "Enabled        Preset: Vignette                                                                 " <<aqua<< "º\n";
 		cout << " ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼\n"
-				"\n Select an option and press Enter [" <<white<< "1-4" <<aqua<< "]: " <<white;
+				"\n Select an option and press Enter [" <<white<< "1-19" <<aqua<< "]: " <<white;
 		string userinput;
 		cin >> userinput;
 		cin.ignore(10000, '\n');
@@ -123,6 +133,171 @@ void Change_PS_Filters_MASTER_status(Pro_Fix_Status *Pro_Fix)
 				Pro_Fix_Restore_enabled(*Pro_Fix);
 			}
 			PS_Filters_Enable(PS_FILTER::SHARPENING);
+			return;
+		}
+		if (userinput == "5")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::DISTORT);
+			return;
+		}
+		if (userinput == "6")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::NEGATIVE);
+			return;
+		}
+		if (userinput == "7")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::GRAYSCALE);
+			return;
+		}
+		if (userinput == "8")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::BW);
+			return;
+		}
+		if (userinput == "9")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::BWINVERSE);
+			return;
+		}
+		if (userinput == "10")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::RED);
+			return;
+		}
+		if (userinput == "11")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::GREEN);
+			return;
+		}
+		if (userinput == "12")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::BLUE);
+			return;
+		}
+		if (userinput == "13")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::NIGHTVISION);
+			return;
+		}
+		if (userinput == "14")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::POSTERIZE);
+			return;
+		}
+		if (userinput == "15")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::MOSAIC);
+			return;
+		}
+		if (userinput == "16")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::DRAWING);
+			return;
+		}
+		if (userinput == "17")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::NEON);
+			return;
+		}
+		if (userinput == "18")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::ANAGLYPH);
+			return;
+		}
+		if (userinput == "19")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::VIGNETTE);
 			return;
 		}
 	} while (true);

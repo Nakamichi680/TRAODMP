@@ -73,7 +73,37 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 		if (Pro_Fix.PS_Filters_status == PS_FILTER::EMBOSS)
 			cout << " º           ³  Select this for more information.                                               ³ Preset = Emboss    º\n";
 		if (Pro_Fix.PS_Filters_status == PS_FILTER::SHARPENING)
-			cout << " º           ³  Select this for more information.                                               ³ Preset = Sharpening  º\n";
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Sharpeningº\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::DISTORT)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Distort   º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::NEGATIVE)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Negative  º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::GRAYSCALE)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Grayscale º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::BW)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = B&W       º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::BWINVERSE)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = B&W Inv   º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::RED)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Red       º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::GREEN)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Green     º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::BLUE)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Blue      º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::NIGHTVISION)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = NightVisi º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::POSTERIZE)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Posterize º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::MOSAIC)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Mosaic    º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::DRAWING)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Drawing   º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::NEON)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Neon      º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::ANAGLYPH)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Anaglyph  º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::VIGNETTE)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = Vignette  º\n";
 		if (Pro_Fix.PS_Filters_status == PS_FILTER::NONE)
 			cout << " º           ³  Select this for more information.                                               ³                    º\n";
 		cout << " º           ³                                                                                  ³                    º\n"

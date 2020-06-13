@@ -12,7 +12,6 @@ int MENU_VARIABLES(int &Version, string &Short_name)
 	{
 		//chrono::steady_clock::time_point begin = chrono::steady_clock::now();
 		vector <int> gcHC(4), gcDC(4), invBg(4);
-		//int ver = Detect_version_advanced();
 		string value1 = gAnimPlayFPS_read();
 		string value2 = playTriggerDamageEffectSize_read();
 		string value3 = g_physics_G_read();

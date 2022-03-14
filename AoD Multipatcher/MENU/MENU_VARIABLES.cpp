@@ -33,6 +33,7 @@ int MENU_VARIABLES(int &Version, string &Short_name)
 		string value19 = dbgMaxCameraDistance_read();
 		string value20 = gameover_timeout_read();
 		string value21 = swim_targetDistance_read();
+		string value22 = apnea_time_read();
 
 		setbackcolor(black);
 		system("cls");
@@ -69,7 +70,7 @@ int MENU_VARIABLES(int &Version, string &Short_name)
 				" บ  19. " <<green<< "dbgMinCameraDistance" <<aqua<< ": minimum distance between player and Dbg Camera (traod_p3/p4 only) .... [" <<dark_white<< value18 <<aqua<< "]  บ\n"
 				" บ  20. " <<green<< "dbgMaxCameraDistance" <<aqua<< ": maximum distance between player and Dbg Camera (traod_p3/p4 only) .... [" <<dark_white<< value19 <<aqua<< "]  บ\n"
 				" บ  21. " <<green<< "gameover_timeout" <<aqua<< ": game-over screen delay in seconds (traod_p3/p4 only) ..................... [" <<dark_white<< value20 <<aqua<< "]  บ\n"
-				" บ                                                                                                                   บ\n"
+				" บ  22. " <<green<< "apnea_time" <<aqua<< ": sets how many seconds Lara can hold her breath underwater (traod_p3/p4 only) ... [" <<dark_white<< value22 <<aqua<< "]  บ\n"
 				" บ                                                                                                                   บ\n"
 				" บ                                                                                                                   บ\n"
 				" บ                                                                                                                   บ\n"
@@ -87,7 +88,7 @@ int MENU_VARIABLES(int &Version, string &Short_name)
 				" ฬอออออออออออออออออออออออออออออออออออออออออออออออออออออออออฯอออออออออหออออออออออออออออออออหออออออออออออออออออออออออออน\n"
 				" บ" <<pink<< "              TRAOD EXE Multi-Patcher by Nakamichi680              " <<aqua<< "บ" <<pink<< "    Version: " << VER << "   " <<aqua<< "บ" <<pink<< "  Build date: " << BDATE << "  " <<aqua<< "บ\n"
 				" ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออสออออออออออออออออออออสออออออออออออออออออออออออออผ\n"
-				"\n Select an option and press Enter [" <<white<< "1-21/B/S/D" <<aqua<< "]: " <<white;
+				"\n Select an option and press Enter [" <<white<< "1-22/B/S/D" <<aqua<< "]: " <<white;
 		//chrono::steady_clock::time_point end= chrono::steady_clock::now();
 		//cout << endl << " Draw time = " << chrono::duration_cast<chrono::milliseconds>(end - begin).count() << " milliseconds" << endl;
 		string userinput;
@@ -138,6 +139,8 @@ int MENU_VARIABLES(int &Version, string &Short_name)
 			dbgMaxCameraDistance_write();
 		if (userinput == "21")
 			gameover_timeout_write();
+		if (userinput == "22")
+			apnea_time_write();
 
 		//if (userinput == "CUTSCENE")
 		//	CutsceneAR_Enable(ver, EXEorig);

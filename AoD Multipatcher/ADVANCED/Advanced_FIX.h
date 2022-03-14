@@ -57,6 +57,7 @@ string dbgMinCameraDistance_read();
 string dbgMaxCameraDistance_read();
 string gameover_timeout_read();
 string swim_targetDistance_read();
+string apnea_time_read();
 
 void gAnimPlayFPS_write();
 void playTriggerDamageEffectSize_write();
@@ -79,3 +80,4 @@ void dbgMinCameraDistance_write();
 void dbgMaxCameraDistance_write();
 void gameover_timeout_write();
 void swim_targetDistance_write();
+void apnea_time_write();

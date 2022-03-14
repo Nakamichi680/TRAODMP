@@ -526,3 +526,27 @@ string swim_targetDistance_read()
 	else
 		return Center_string2("N.A.", 12);
 }
+
+string apnea_time_read()
+{
+	size_t offset;
+	stringstream temp2;
+	float out;
+	if (ver == 452)		offset = 3427092;
+	if (ver == 449)		offset = 3424180;
+	if (ver == 442)		offset = 3257268;
+	if (ver == 439)		offset = 3214324;
+	if (ver == 352)		offset = 3356076;
+	if (ver == 349)		offset = 3357388;
+	if (ver == 342)		offset = 3190444;
+	if (ver == 339)		offset = 3147500;
+	if (ver != 39 && ver != 42 && ver != 49 && ver != 52)
+	{
+		string temp = EXEorig.substr(offset, 4);
+		memcpy(&out, &temp, 4);
+		temp2 << out;
+		return Center_string2(temp2.str(), 12);
+	}
+	else
+		return Center_string2("N.A.", 12);
+}

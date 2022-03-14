@@ -548,3 +548,26 @@ void swim_targetDistance_write()
 		ChangeSTRINGValue(temp, offset);
 	}
 }
+
+
+void apnea_time_write()
+{
+	float value = 60;								// Valore di default
+	size_t offset;
+	if (ver == 452)		offset = 3427092;
+	if (ver == 449)		offset = 3424180;
+	if (ver == 442)		offset = 3257268;
+	if (ver == 439)		offset = 3214324;
+	if (ver == 352)		offset = 3356076;
+	if (ver == 349)		offset = 3357388;
+	if (ver == 342)		offset = 3190444;
+	if (ver == 339)		offset = 3147500;
+	if (ver != 39 && ver != 42 && ver != 49 && ver != 52)
+	{
+		cout << "\n\n --------------------------------------------------   apnea_time   ---------------------------------------------------\n\n";
+		Ask_value("", 5, 300, &value, true);	// Richiesta input valore da parte dell'utente
+		string temp = "fill";						// Viene assegnato un testo arbitrario alla string temp per inizializzare i 4 byte di memoria che accoglieranno il float
+		memcpy(&temp, &value, 4);					// Copia del valore in esadecimale dal float alla stringa
+		ChangeSTRINGValue(temp, offset);
+	}
+}

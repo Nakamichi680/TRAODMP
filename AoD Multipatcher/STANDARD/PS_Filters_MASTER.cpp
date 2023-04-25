@@ -41,7 +41,7 @@ void Change_PS_Filters_MASTER_status(Pro_Fix_Status *Pro_Fix)
 				" บ         17)  NEON                                                                                                 บ\n"
 				" บ         18)  ANAGLYPH                                                                                             บ\n"
 				" บ         19)  VIGNETTE                                                                                             บ\n"
-				" บ                                                                                                                   บ\n"
+				" บ         20)  DOF                                                                                                  บ\n"
 				" บ                                                                                                                   บ\n"
 				" บ                                                                                                                   บ\n"
 				" ฬอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออน\n"
@@ -84,8 +84,10 @@ void Change_PS_Filters_MASTER_status(Pro_Fix_Status *Pro_Fix)
 			cout << "Enabled        Preset: Anaglyph                                                                 " <<aqua<< "บ\n";
 		if (Pro_Fix->PS_Filters_status == PS_FILTER::VIGNETTE)
 			cout << "Enabled        Preset: Vignette                                                                 " <<aqua<< "บ\n";
+		if (Pro_Fix->PS_Filters_status == PS_FILTER::DOF)
+			cout << "Enabled        Preset: DOF                                                                      " <<aqua<< "บ\n";
 		cout << " ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออผ\n"
-				"\n Select an option and press Enter [" <<white<< "1-19" <<aqua<< "]: " <<white;
+				"\n Select an option and press Enter [" <<white<< "1-20" <<aqua<< "]: " <<white;
 		string userinput;
 		cin >> userinput;
 		cin.ignore(10000, '\n');
@@ -298,6 +300,17 @@ void Change_PS_Filters_MASTER_status(Pro_Fix_Status *Pro_Fix)
 				Pro_Fix_Restore_enabled(*Pro_Fix);
 			}
 			PS_Filters_Enable(PS_FILTER::VIGNETTE);
+			return;
+		}
+		if (userinput == "20")
+		{
+			if (Pro_Fix->PS_Filters_status != PS_FILTER::NONE)
+			{
+				Pro_Fix_Deallocate_space();
+				Pro_Fix->PS_Filters_status = PS_FILTER::NONE;
+				Pro_Fix_Restore_enabled(*Pro_Fix);
+			}
+			PS_Filters_Enable(PS_FILTER::DOF);
 			return;
 		}
 	} while (true);

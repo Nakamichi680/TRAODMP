@@ -104,6 +104,8 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 			cout << " º           ³  Select this for more information.                                               ³ Preset = Anaglyph  º\n";
 		if (Pro_Fix.PS_Filters_status == PS_FILTER::VIGNETTE)
 			cout << " º           ³  Select this for more information.                                               ³ Preset = Vignette  º\n";
+		if (Pro_Fix.PS_Filters_status == PS_FILTER::DOF)
+			cout << " º           ³  Select this for more information.                                               ³ Preset = DOF       º\n";
 		if (Pro_Fix.PS_Filters_status == PS_FILTER::NONE)
 			cout << " º           ³  Select this for more information.                                               ³                    º\n";
 		cout << " º           ³                                                                                  ³                    º\n"

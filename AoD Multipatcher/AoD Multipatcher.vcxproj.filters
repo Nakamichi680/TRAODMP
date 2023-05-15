@@ -431,6 +431,9 @@
     <ClCompile Include="STANDARD\PS_Filters_MASTER.cpp">
       <Filter>File di origine\Standard_FIX</Filter>
     </ClCompile>
+    <ClCompile Include="STANDARD\Fog.cpp">
+      <Filter>File di origine\Standard_FIX</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Icon.rc">

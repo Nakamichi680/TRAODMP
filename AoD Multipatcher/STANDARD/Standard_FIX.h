@@ -35,6 +35,8 @@ bool Detect_LadderCamRotation_status();				// Restituisce vero se la rotazione d
 bool Detect_MenuButtons_status();					// Restituisce vero se i tasti indietro, su e giù dei menu sono modificati
 bool Detect_NumpadExit_status();					// Restituisce vero se è possibile uscire dal tastierino col gamepad, falso se impossibile (originale)
 // FINE CONTROLS MOD
+bool Detect_Fog_status();							// Restituisce vero se il fix per la nebbia è attivo, falso se l'exe è originale
+bool Detect_PortalNCP_status();						// Restituisce vero se il fix per il near clip plane dei portali è attivo, falso se l'exe è originale
 
 
 void Change_Dead_bodies_status();
@@ -72,3 +74,5 @@ void Change_NumpadExit_status();							// Permette di uscire dal tastierino nume
 // FINE CONTROLS MOD
 void Change_HeatHaze_effect_MASTER_status(Pro_Fix_Status *Pro_Fix);
 void Change_PS_Filters_MASTER_status(Pro_Fix_Status *Pro_Fix);
+void Change_Fog_status();
+void Change_PortalNCP_status();

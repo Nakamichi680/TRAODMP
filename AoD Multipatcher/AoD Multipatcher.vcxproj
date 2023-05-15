@@ -257,6 +257,7 @@
     <ClCompile Include="STANDARD\Farsee.cpp" />
     <ClCompile Include="STANDARD\ESC_SKIP_MASTER.cpp" />
     <ClCompile Include="STANDARD\ESC_SKIP_FMV.cpp" />
+    <ClCompile Include="STANDARD\Fog.cpp" />
     <ClCompile Include="STANDARD\Force_fur.cpp" />
     <ClCompile Include="STANDARD\Force_specular.cpp" />
     <ClCompile Include="STANDARD\Ger_blood.cpp" />

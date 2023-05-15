@@ -10,8 +10,9 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 	do
 	{
 		Pro_Fix_Status Pro_Fix;
-		//int ver = Detect_version_advanced();
+
 		Pro_Fix_Detect_status_ALL(&Pro_Fix);
+		bool FOG_status = Detect_Fog_status();										// Controlla se il fix per la nebbia Š attivo
 
 		stringstream text;
 		system("cls");
@@ -109,6 +110,32 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 		if (Pro_Fix.PS_Filters_status == PS_FILTER::NONE)
 			cout << " º           ³  Select this for more information.                                               ³                    º\n";
 		cout << " º           ³                                                                                  ³                    º\n"
+				" ÇÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
+				" º           ³                                                                                  ³                    º\n"
+				" º     2     ³  FOG SAVEGAME BUG FIX                                                            ³   (";
+		if (FOG_status)
+			cout << "ù) Enabled      º\n";
+		else
+			cout << " ) Enabled      º\n";
+		cout << " º           ³  Fix for missing fog when reloading a savegame. Applies only to new savegames.   ³   (";
+		if (!FOG_status)
+			cout << "ù) Disabled     º\n";
+		else
+			cout << " ) Disabled     º\n";
+		cout << " º           ³                                                                                  ³                    º\n"
+				" ÇÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
+				" º           ³                                                                                  ³                    º\n"
+				" º     3     ³  PORTAL NEAR CLIP PLANE FIX                                                      ³   (";
+		if (Pro_Fix.fxGasCloudRotation_status)
+			cout << "ù) Enabled      º\n";
+		else
+			cout << " ) Enabled      º\n";
+		cout << " º           ³  Fix for random disappearing geometry. Strongly recommended.                     ³   (";
+		if (!Pro_Fix.fxGasCloudRotation_status)
+			cout << "ù) Disabled     º\n";
+		else
+			cout << " ) Disabled     º\n";
+		cout << " º           ³                                                                                  ³                    º\n"
 				" ÇÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
 				" º" <<white<< "   <---- (P)revious page   " <<aqua<< "³" <<white<< "                (X) Switch to Advanced Mods                "
 				<<aqua<< "³" <<white<< "                           " <<aqua<< "º\n"
@@ -119,7 +146,7 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 				" ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹\n"
 				" º" <<pink<< "              TRAOD EXE Multi-Patcher by Nakamichi680              " <<aqua<< "º" <<pink<< "    Version: " << VER << "   " <<aqua<< "º" <<pink<< "  Build date: " << BDATE << "  " <<aqua<< "º\n"
 				" ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼\n"
-				"\n Select an option and press Enter [" <<white<< "1/P/X/S/D" <<aqua<< "]: " <<white;
+				"\n Select an option and press Enter [" <<white<< "1-3/P/X/S/D" <<aqua<< "]: " <<white;
 		char Selection;
 		string userinput;
 		userinput.clear();

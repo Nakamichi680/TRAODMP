@@ -28,7 +28,7 @@ bool Detect_Fog_status()							// Restituisce vero se il fix per la nebbia è att
 		(Position = EXEorig.find(orig_fxSave_traod_52)) != std::string::npos || (Position = EXEorig.find(orig_fxSave_traod_49)) != std::string::npos ||
 		(Position = EXEorig.find(orig_fxSave_traod_42)) != std::string::npos || (Position = EXEorig.find(orig_fxSave_traod_39)) != std::string::npos)
 		return false;
-	return true;			// Se pincopallino non trova alcuna stringa originale significa che il file è modificato
+	return true;			// Se non trova alcuna stringa originale significa che il file è modificato
 }
 
 

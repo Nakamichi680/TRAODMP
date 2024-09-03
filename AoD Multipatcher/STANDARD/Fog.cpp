@@ -20,22 +20,6 @@ bool Detect_Fog_status()							// Restituisce vero se il fix per la nebbia è att
 	string orig_fxSave_traod_42("\x6A\x20\x68\x2C\x4D\x8A\0\xE8\x80\xD0\xFF\xFF\x6A\x08", 14);
 	string orig_fxSave_traod_39("\x6A\x20\x68\x2C\xE1\x88\0\xE8\x80\xD0\xFF\xFF\x6A\x08", 14);
 
-	//////////////////		_fxLoad		Stringhe originali
-	string orig_fxLoad_traod_p4_52("\x6A\x20\x68\x40\x5B\x90\0\xE8\xE0\xCD\xFF\xFF\x6A\x08", 14);
-	string orig_fxLoad_traod_p4_49("\x6A\x20\x68\0\x4B\x90\0\xE8\x28\xCF\xFF\xFF\x6A\x08", 14);
-	string orig_fxLoad_traod_p4_42("\x6A\x20\x68\xE0\xC7\x8D\0\xE8\x28\xCF\xFF\xFF\x6A\x08", 14);
-	string orig_fxLoad_traod_p4_39("\x6A\x20\x68\xA0\x24\x8D\0\xE8\x28\xCF\xFF\xFF\x6A\x08", 14);
-
-	string orig_fxLoad_traod_p3_52("\x6A\x20\x68\x04\x42\x8F\0\xE8\x30\xCE\xFF\xFF\x6A\x08", 14);
-	string orig_fxLoad_traod_p3_49("\x6A\x20\x68\xC4\x41\x8F\0\xE8\x80\xCF\xFF\xFF\x6A\x08", 14);
-	string orig_fxLoad_traod_p3_42("\x6A\x20\x68\xA4\xBE\x8C\0\xE8\x80\xCF\xFF\xFF\x6A\x08", 14);
-	string orig_fxLoad_traod_p3_39("\x6A\x20\x68\x24\x1B\x8C\0\xE8\x80\xCF\xFF\xFF\x6A\x08", 14);
-
-	string orig_fxLoad_traod_52("\x6A\x20\x68\x6C\x28\x8C\0\xE8\x60\xCE\xFF\xFF\x6A\x08", 14);
-	string orig_fxLoad_traod_49("\x6A\x20\x68\xAC\x19\x8C\0\xE8\xA0\xCF\xFF\xFF\x6A\x08", 14);
-	string orig_fxLoad_traod_42("\x6A\x20\x68\x2C\x4D\x8A\0\xE8\xA0\xCF\xFF\xFF\x6A\x08", 14);
-	string orig_fxLoad_traod_39("\x6A\x20\x68\x2C\xE1\x88\0\xE8\xA0\xCF\xFF\xFF\x6A\x08", 14);
-
 	size_t Position;
 	if ((Position = EXEorig.find(orig_fxSave_traod_p4_52)) != std::string::npos || (Position = EXEorig.find(orig_fxSave_traod_p4_49)) != std::string::npos ||
 		(Position = EXEorig.find(orig_fxSave_traod_p4_42)) != std::string::npos || (Position = EXEorig.find(orig_fxSave_traod_p4_39)) != std::string::npos ||

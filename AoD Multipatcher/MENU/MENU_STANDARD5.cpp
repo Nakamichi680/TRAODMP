@@ -13,6 +13,7 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 
 		Pro_Fix_Detect_status_ALL(&Pro_Fix);
 		bool FOG_status = Detect_Fog_status();										// Controlla se il fix per la nebbia Š attivo
+		bool PORTAL_NCP_status = Detect_PortalNCP_status();							// Controlla se il fix per il near clip plane dei portali Š attivo
 
 		stringstream text;
 		system("cls");
@@ -126,12 +127,12 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 				" ÇÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
 				" º           ³                                                                                  ³                    º\n"
 				" º     3     ³  PORTAL NEAR CLIP PLANE FIX                                                      ³   (";
-		if (Pro_Fix.fxGasCloudRotation_status)
+		if (PORTAL_NCP_status)
 			cout << "ù) Enabled      º\n";
 		else
 			cout << " ) Enabled      º\n";
 		cout << " º           ³  Fix for random disappearing geometry. Strongly recommended.                     ³   (";
-		if (!Pro_Fix.fxGasCloudRotation_status)
+		if (!PORTAL_NCP_status)
 			cout << "ù) Disabled     º\n";
 		else
 			cout << " ) Disabled     º\n";

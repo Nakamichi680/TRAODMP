@@ -12,8 +12,8 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 		Pro_Fix_Status Pro_Fix;
 
 		Pro_Fix_Detect_status_ALL(&Pro_Fix);
-		bool FOG_status = Detect_Fog_status();										// Controlla se il fix per la nebbia Š attivo
-		bool PORTAL_NCP_status = Detect_PortalNCP_status();							// Controlla se il fix per il near clip plane dei portali Š attivo
+		bool Fog_status = Detect_Fog_status();										// Controlla se il fix per la nebbia Š attivo
+		bool PortalNCP_status = Detect_PortalNCP_status();							// Controlla se il fix per il near clip plane dei portali Š attivo
 
 		stringstream text;
 		system("cls");
@@ -114,12 +114,12 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 				" ÇÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
 				" º           ³                                                                                  ³                    º\n"
 				" º     2     ³  FOG SAVEGAME BUG FIX                                                            ³   (";
-		if (FOG_status)
+		if (Fog_status)
 			cout << "ù) Enabled      º\n";
 		else
 			cout << " ) Enabled      º\n";
 		cout << " º           ³  Fix for missing fog when reloading a savegame. Applies only to new savegames.   ³   (";
-		if (!FOG_status)
+		if (!Fog_status)
 			cout << "ù) Disabled     º\n";
 		else
 			cout << " ) Disabled     º\n";
@@ -127,12 +127,12 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 				" ÇÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
 				" º           ³                                                                                  ³                    º\n"
 				" º     3     ³  PORTAL NEAR CLIP PLANE FIX                                                      ³   (";
-		if (PORTAL_NCP_status)
+		if (PortalNCP_status)
 			cout << "ù) Enabled      º\n";
 		else
 			cout << " ) Enabled      º\n";
 		cout << " º           ³  Fix for random disappearing geometry. Strongly recommended.                     ³   (";
-		if (!PORTAL_NCP_status)
+		if (!PortalNCP_status)
 			cout << "ù) Disabled     º\n";
 		else
 			cout << " ) Disabled     º\n";
@@ -162,6 +162,12 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 		{
 		case '1':
 			Change_PS_Filters_MASTER_status(&Pro_Fix);
+			break;
+		case '2':
+			Change_Fog_status();
+			break;
+		case '3':
+			Change_PortalNCP_status();
 			break;
 		case 'X':
 			return 50;

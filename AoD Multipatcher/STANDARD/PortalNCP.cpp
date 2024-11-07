@@ -2,9 +2,9 @@
 #include "MISC/Misc_Functions.h"
 
 
-bool Detect_PortalNCP_status()						// Restituisce vero se il lag nella LookCamera è 0, falso se è 1Eh (originale)
+bool Detect_PortalNCP_status()						// Restituisce vero se il fix per il near clip plane è attivo, falso se l'exe è originale
 {
-	//////////////////		_Camera_EnterExitLookHandler		Stringhe originali
+	//////////////////		CalculateClipPlanes		Stringhe originali
 	string orig_traod_p4_52("\x89\x15\x38\x53\x7B\0\x83\xFA\x1E\x7F\x0E\xA1\x60\xE3\x6D", 15);
 	string orig_traod_p4_49("\x89\x15\xF8\x42\x7B\0\x83\xFA\x1E\x7F\x0E\xA1\x20\xD3\x6D", 15);
 	string orig_traod_p4_42("\x89\x15\xD8\xBF\x78\0\x83\xFA\x1E\x7F\x0E\xA1\xE0\x50\x6B", 15);
@@ -67,8 +67,8 @@ void Change_PortalNCP_status()
 	string mod_traod_39("\xA1\xB8\x7B\x83\0\x40\x83\xF8\0\xA3\xB8\x7B\x83", 13);
 
 	size_t Position;
-	bool LookCamera_delay_status = Detect_LookCamera_delay_status();
-	if (LookCamera_delay_status)		// Se il file è modificato, bisogna cercare le stringhe mod e sostituirle con le originali
+	bool PortalNCP_status = Detect_PortalNCP_status();
+	if (PortalNCP_status)				// Se il file è modificato, bisogna cercare le stringhe mod e sostituirle con le originali
 	{
 		// TRAOD_P4
 		if ((Position = EXEorig.find(mod_traod_p4_52)) != std::string::npos)

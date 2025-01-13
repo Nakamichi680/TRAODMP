@@ -263,6 +263,7 @@
     <ClCompile Include="STANDARD\Ger_blood.cpp" />
     <ClCompile Include="STANDARD\HeatHaze_effect_MASTER.cpp" />
     <ClCompile Include="STANDARD\HighQualityCubemaps.cpp" />
+    <ClCompile Include="STANDARD\Hop_swerve.cpp" />
     <ClCompile Include="STANDARD\Lara_glasses.cpp" />
     <ClCompile Include="STANDARD\LockOutControl.cpp" />
     <ClCompile Include="STANDARD\LookCamera_delay.cpp" />

@@ -37,6 +37,7 @@ bool Detect_NumpadExit_status();					// Restituisce vero se è possibile uscire d
 // FINE CONTROLS MOD
 bool Detect_Fog_status();							// Restituisce vero se il fix per la nebbia è attivo, falso se l'exe è originale
 bool Detect_PortalNCP_status();						// Restituisce vero se il fix per il near clip plane dei portali è attivo, falso se l'exe è originale
+bool Detect_Hop_swerve_status();					// Restituisce vero se il fix per il saltello storto è attivo, falso se l'exe è originale
 
 
 void Change_Dead_bodies_status();
@@ -76,3 +77,4 @@ void Change_HeatHaze_effect_MASTER_status(Pro_Fix_Status *Pro_Fix);
 void Change_PS_Filters_MASTER_status(Pro_Fix_Status *Pro_Fix);
 void Change_Fog_status();
 void Change_PortalNCP_status();
+void Change_Hop_swerve_status();

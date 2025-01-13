@@ -14,6 +14,7 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 		Pro_Fix_Detect_status_ALL(&Pro_Fix);
 		bool Fog_status = Detect_Fog_status();										// Controlla se il fix per la nebbia Š attivo
 		bool PortalNCP_status = Detect_PortalNCP_status();							// Controlla se il fix per il near clip plane dei portali Š attivo
+		bool Hop_swerve_status = Detect_Hop_swerve_status();						// Controlla se il fix per il saltello storto Š attivo
 
 		stringstream text;
 		system("cls");
@@ -137,7 +138,20 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 		else
 			cout << " ) Disabled     º\n";
 		cout << " º           ³                                                                                  ³                    º\n"
-				" ÇÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
+				" ÇÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
+				" º           ³                                                                                  ³                    º\n"
+				" º     4     ³  HOP SWERVE FIX                                                                  ³   (";
+		if (Hop_swerve_status)
+			cout << "ù) Enabled      º\n";
+		else
+			cout << " ) Enabled      º\n";
+		cout << " º           ³  Lara will no longer swerve left/right while hopping.                            ³   (";
+		if (!Hop_swerve_status)
+			cout << "ù) Disabled     º\n";
+		else
+			cout << " ) Disabled     º\n";
+		cout << " º           ³                                                                                  ³                    º\n"
+		" ÇÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
 				" º" <<white<< "   <---- (P)revious page   " <<aqua<< "³" <<white<< "                (X) Switch to Advanced Mods                "
 				<<aqua<< "³" <<white<< "                           " <<aqua<< "º\n"
 				" ÇÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¶\n"
@@ -147,7 +161,7 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 				" ÌÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍËÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¹\n"
 				" º" <<pink<< "              TRAOD EXE Multi-Patcher by Nakamichi680              " <<aqua<< "º" <<pink<< "    Version: " << VER << "   " <<aqua<< "º" <<pink<< "  Build date: " << BDATE << "  " <<aqua<< "º\n"
 				" ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÊÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼\n"
-				"\n Select an option and press Enter [" <<white<< "1-3/P/X/S/D" <<aqua<< "]: " <<white;
+				"\n Select an option and press Enter [" <<white<< "1-4/P/X/S/D" <<aqua<< "]: " <<white;
 		char Selection;
 		string userinput;
 		userinput.clear();
@@ -168,6 +182,9 @@ int MENU_STANDARD5(int &Version, string &Short_name)
 			break;
 		case '3':
 			Change_PortalNCP_status();
+			break;
+		case '4':
+			Change_Hop_swerve_status();
 			break;
 		case 'X':
 			return 50;

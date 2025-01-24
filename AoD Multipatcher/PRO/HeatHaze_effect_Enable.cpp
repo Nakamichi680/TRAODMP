@@ -38,7 +38,7 @@ void HeatHaze_effect_Enable()
 	// 4) MODIFICA VERTEX SHADER
 	// 5) MODIFICA PIXEL SHADER
 	// 6) MODIFICA FUNZIONE fxDrawHeatHaze
-	// 7) ELIMINAZIONE CHIAMATA DOPPIA A _animProcessFXList (solo vv. 39 e 42)
+	// 7) ELIMINAZIONE CHIAMATA DOPPIA A _animProcessFXList (solo vv. 39, 42, 339, 342, 439, 442)
 	switch (ver)
 	{
 	case (452):
